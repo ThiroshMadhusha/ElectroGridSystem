@@ -147,5 +147,57 @@ public class billModel {
 		}
 		
 
+		
+		// Update Bill 
+		
+		public String updateBill(String ID, String account_no, String name, String address, String bill_no, String units, String t_amount ) {
+			
+			String output = "";
+			
+			try {
+				
+				Connection con = connect();
+				if (con == null)
+				{
+					return "Error while connecting to the database for updating."; 
+				}
+				
+				
+				
+				// create a prepared statement
+				String query = "UPDATE bills SET billAccountNo=?,billName=?,billAddress=?,billNo=?,billUnit=?,billtAmount=? WHERE billID=? ";
+				PreparedStatement preparedStmt = con.prepareStatement(query);
+				
+				
+				// binding values
+				preparedStmt.setString(1, account_no);
+				preparedStmt.setString(2, name);
+				preparedStmt.setString(3, address);
+				preparedStmt.setString(4, bill_no);
+//				preparedStmt.setString(5, c_read);
+				preparedStmt.setString(5, units);
+//				preparedStmt.setString(7, c_amount);
+//				preparedStmt.setString(8, p_amount);
+				preparedStmt.setString(6, t_amount);
+				preparedStmt.setInt(7,Integer.parseInt(ID));
+				
+				
+				// execute the statement
+				preparedStmt.execute();
+				con.close();
+				output = "Updated Bill successfully";
+				   
+			}catch(Exception e) {
+				
+				output = "Error while updating the billing details.";
+				System.err.println(e.getMessage());
+			}
+			
+			return output;
+		}
+		
+		
+		
+
 	
 }
