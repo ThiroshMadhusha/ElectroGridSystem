@@ -35,6 +35,24 @@ public class billService {
 		return billObj.readBill();
 	}
 	
+	// Insert Bill
+
+		@POST
+		@Path("/")
+		@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+		@Produces(MediaType.TEXT_PLAIN)
+		public String insertBill(
+				@FormParam("billAccountNo")String billAccountNo,
+				@FormParam("billName")String billName,
+				@FormParam("billAddress")String billAddress,
+				@FormParam("billNo")String billNo,
+				@FormParam("billUnit")String billUnit,
+				@FormParam("billtAmount")String billtAmount)
+		{
+			String output = billObj.insertBill(billAccountNo, billName, billAddress, billNo, billUnit, billtAmount );
+			return output;
+		}
+	
 
 
 }
