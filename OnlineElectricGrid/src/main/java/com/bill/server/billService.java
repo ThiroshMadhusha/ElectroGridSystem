@@ -76,7 +76,24 @@ public class billService {
 				
 				return output;
 			}
-		
+			
+//			Delete Bill
+
+			@DELETE
+			@Path("/")
+			@Consumes(MediaType.APPLICATION_XML)
+			@Produces(MediaType.TEXT_PLAIN)
+			public String deletebill(String billData)
+			{
+				//Convert the input string to an XML document
+				Document doc = Jsoup.parse(billData, "", Parser.xmlParser());
+			
+				//Read the value from the element <Account No>
+				String billID = doc.select("billID").text();
+				
+				String output = billObj.deletebill(billID);
+				return output;
+			}	
 	
 
 
