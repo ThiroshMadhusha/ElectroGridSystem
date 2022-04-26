@@ -52,6 +52,31 @@ public class billService {
 			String output = billObj.insertBill(billAccountNo, billName, billAddress, billNo, billUnit, billtAmount );
 			return output;
 		}
+		
+		//Update Bill
+		
+			@PUT
+			@Path("/")
+			@Consumes(MediaType.APPLICATION_JSON)
+			@Produces(MediaType.TEXT_PLAIN)
+			public String updateBill(String billData) {
+				
+				//Convert the input string to a JSON object 
+				JsonObject billObject = new JsonParser().parse(billData).getAsJsonObject();
+					
+				String billID = billObject.get("billID").getAsString();
+				String billAccountNo = billObject.get("billAccountNo").getAsString();
+				String billName = billObject.get("billName").getAsString();
+				String billAddress = billObject.get("billAddress").getAsString();
+				String billNo = billObject.get("billNo").getAsString();
+				String billUnit = billObject.get("billUnit").getAsString();
+				String billtAmount = billObject.get("billtAmount").getAsString();
+				
+				String output = billObj.updateBill(billID, billAccountNo, billName, billAddress, billNo, billUnit, billtAmount);
+				
+				return output;
+			}
+		
 	
 
 
