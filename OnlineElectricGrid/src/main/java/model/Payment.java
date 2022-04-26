@@ -16,7 +16,7 @@ public class Payment
 		 Class.forName("com.mysql.jdbc.Driver");
 
 		 //DB details: DBServer/DBName, user name, password
-		 con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "prasan123");
+		 con = DriverManager.getConnection("jdbc:mysql://localhost:3306/payments", "root", "prasan123");
 		 }
 		 catch (Exception e)
 		 {e.printStackTrace();}
@@ -46,7 +46,7 @@ public class Payment
 	 preparedStmt.setString(3, name);
 	 preparedStmt.setDouble(4, Double.parseDouble(amount));
 	 preparedStmt.setDouble(5,Double.parseDouble(contact));
-	 preparedStmt.setString(6, "admin remark");
+	 preparedStmt.setString(6, " ");
 	 // execute the statement
 	 
 	 preparedStmt.execute();
@@ -76,7 +76,7 @@ public class Payment
 				 
 				 // Prepare the html table to be displayed
 				 
-				 output = "<table border='1'><tr><th> A/C Number </th><th> Name </th>" +
+				 output = "<table border='1'><tr><th>RefNo</th><th> A/C Number </th><th> Name </th>" +
 				 "<th> Payment Amount </th>" +
 				 "<th>  Contact   </th></tr>";
 
@@ -95,7 +95,8 @@ public class Payment
 			
 				 
 				 // Add into the html table
-				 output += "<tr><td>" + paymentCode + "</td>";
+				 output += "<tr><td>" + paymentID + "</td>";
+				 output += "<td>" + paymentCode + "</td>";
 				 output += "<td>" + paymentName + "</td>";
 				 output += "<td>" + paymentAmount + "</td>";
 				 output += "<td>" + paymentContact + "</td>";
@@ -139,18 +140,18 @@ public class Payment
 						 // execute the statement
 						 preparedStmt.execute();
 						 con.close();
-						 output = "Updated successfully";
+						 output = "Updated admin remark successfully";
 						 }
 						 catch (Exception e)
 						 {
-						 output = "Error while updating the item.";
+						 output = "Error while updating the admin remark.";
 						 System.err.println(e.getMessage());
 						 }
 						 return output; 
-						
+					}		
 		} 
-
+				
 	}
 
+
 				
-}

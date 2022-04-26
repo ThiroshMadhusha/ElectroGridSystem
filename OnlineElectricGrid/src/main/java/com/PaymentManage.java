@@ -2,7 +2,7 @@ package com;
 
     import model.Payment;
 
-
+  
     import javax.ws.rs.Consumes;
     import javax.ws.rs.FormParam;
     import javax.ws.rs.GET;
@@ -12,8 +12,11 @@ package com;
     import javax.ws.rs.Produces;
     import javax.ws.rs.core.MediaType;
 
+
+
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+
    
 
 
@@ -25,7 +28,7 @@ import com.google.gson.JsonParser;
 public class PaymentManage {
 		
 	
-		 private static final String ID = null;
+		
 		Payment paymentObj = new Payment();
 		@GET
 		@Path("/") 
@@ -69,6 +72,7 @@ public class PaymentManage {
 		 String output = paymentObj.updatePayment(adminRemark, paymentID);
 			return output;
 		}
+		
 		
 	}
 		
