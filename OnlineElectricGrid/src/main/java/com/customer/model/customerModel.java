@@ -176,7 +176,7 @@ public class customerModel {
 			   
 		}catch(Exception e) {
 			
-			output = "Error while updating the billing details.";
+			output = "Error while updating the customer details.";
 			System.err.println(e.getMessage());
 		}
 		
@@ -196,7 +196,7 @@ public class customerModel {
 				return "Error while connecting to the database for deleting."; 
 			}
 			// create a prepared statement
-			String query = "delete from cutomer where cusID=?";
+			String query = "delete from customer where cusID=?";
 			PreparedStatement preparedStmt = con.prepareStatement(query);
 			
 			// binding values
