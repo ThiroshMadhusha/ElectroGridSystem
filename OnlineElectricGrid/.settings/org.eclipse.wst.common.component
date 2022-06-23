@@ -6,5 +6,11 @@
         <wb-resource deploy-path="/" source-path="/WebContent"/>
         <property name="context-root" value="PaymentManagement"/>
         <property name="java-output-path" value="/PaymentManagement/build/classes"/>
+    <wb-module deploy-name="OnlineEG-0.0.1-SNAPSHOT">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <property name="context-root" value="OnlineEG"/>
+        <property name="java-output-path" value="/OnlineEG/build/classes"/>
     </wb-module>
 </project-modules>

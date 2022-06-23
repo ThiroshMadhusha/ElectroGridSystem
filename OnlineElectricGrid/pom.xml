@@ -2,6 +2,8 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.PaymentManagement</groupId>
   <artifactId>PaymentManagement</artifactId>
+  <groupId>com.OnlineEG</groupId>
+  <artifactId>OnlineEG</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <build>
@@ -26,6 +28,7 @@
     </plugins>
   </build>
  <dependencies>
+   <dependencies>
  		<dependency>
  			<groupId>com.sun.jersey</groupId>
  			<artifactId>jersey-bundle</artifactId>
