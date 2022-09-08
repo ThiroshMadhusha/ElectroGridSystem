@@ -12,7 +12,7 @@ IT20173104 - Shavinda Y.A.D.P
 
 # Individual Contributions :
 
-## IT20146238 - Jayathunga T.M.
+# IT20146238 - Jayathunga T.M.
 
 ### Insert Bill
 
@@ -42,7 +42,7 @@ IT20173104 - Shavinda Y.A.D.P
 ![Screenshot_5](https://user-images.githubusercontent.com/79472177/189226352-90565d52-8f3f-4a0b-b97f-efafdc8e9633.png)
 
 
-## IT20171654 - Rajapaksha R.P.S.V.
+# IT20171654 - Rajapaksha R.P.S.V.
 
 ![Picture7](https://user-images.githubusercontent.com/79472177/189196130-7f9e2776-3c7d-48bc-b08f-be4f17b666fd.png)
 
@@ -58,7 +58,7 @@ IT20173104 - Shavinda Y.A.D.P
 
 
 
-## IT20173104 - Shavinda Y.A.D.P
+# IT20173104 - Shavinda Y.A.D.P
 
 ![Picture13](https://user-images.githubusercontent.com/79472177/189196322-b599572c-2cb0-461d-b03f-949de66210be.png)
 
